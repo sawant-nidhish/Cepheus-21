@@ -1,0 +1,45 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- know_iitgoa
+- techfest_iitgoa
+- competitions_techfest
+- weather_info
+- city_name
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_iitgoa_info:
+  - text: "IIT Goa will strive to become a unique institution of higher learning,\
+      \ offering state of the art education, research, and training in science and\
+      \ technology to have impact on society, environment and global challenges.\n\
+      \ To know more about IIGOA head over :- https://www.iitgoa.ac.in/"
+  utter_techfest_info:
+  - text: "IIT GOA hosts its 1st techfest CEPHEUS from 15-17 Jan. \n To know more\
+      \ about IIT GOA head over :- https://www.iitgoa.ac.in/Cepheus/"
+  utter_compete:
+  - text: "Here are Today's competitions :- \n 1. Chit chat with chatbot \n 2. Fizzbuzz\
+      \ \n 3. Pandora's Box \n"
+  utter_ask_city:
+  - text: "Okay ! Tell me which City's weather you want to know about? "
+actions:
+- action_weather_info
