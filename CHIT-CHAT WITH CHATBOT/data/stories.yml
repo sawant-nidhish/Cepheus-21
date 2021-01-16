@@ -1,0 +1,98 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+- story: IIT GOA Short
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+  - intent: mood_great
+  - action: utter_happy
+
+  - intent: know_iitgoa
+  - action: utter_iitgoa_info
+
+  - intent: techfest_iitgoa
+  - action: utter_techfest_info
+
+  - intent: competitions_techfest
+  - action: utter_compete
+
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+
+- story: IIT GOA Shortest
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+  - intent: mood_great
+  - action: utter_happy
+
+  - intent: techfest_iitgoa
+  - action: utter_techfest_info
+
+  - intent: competitions_techfest
+  - action: utter_compete
+
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+  
+- story: IIT GOA Full
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+  - intent: mood_great
+  - action: utter_happy
+
+  - intent: know_iitgoa
+  - action: utter_iitgoa_info
+
+  - intent: techfest_iitgoa
+  - action: utter_techfest_info
+
+  - intent: competitions_techfest
+  - action: utter_compete
+
+  - intent: weather_info
+  - action: utter_ask_city
+
+  - intent: city_name
+  - action: action_weather_info
+
+  - intent: goodbye
+  - action: utter_goodbye
